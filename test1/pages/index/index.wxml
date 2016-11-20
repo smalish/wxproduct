@@ -1,10 +1,17 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+ 	<view class="input_block">
+  		<input class="input_text" focus="0" placeholder="请输入" value="{{newTodoText}}" bindinput="inputNewItem"></input>
+  		<button class="input_btn" bindtap="addItem">添加</button>
+  	</view>
+
+  	<checkbox-group class="itemList">
+	  	<label class="checkbox mycheckbox" wx:for="{{items}}">
+	    	<checkbox checked="{{item.checked}}"/>{{item.value}}
+	    	<button class="deleteItem" id="{{item.value}}" bindtap="deleteItem">删除</button>
+	  	</label>
+	  	<label wx:if="{{items.length > 0}}" class="checkbox mycheckbox">选项条数：{{items.length}}</label>
+	</checkbox-group>
+
+
 </view>

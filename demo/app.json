@@ -69,7 +69,10 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "演示",
     "navigationBarBackgroundColor": "#fbf9fe",
-    "backgroundColor": "#fbf9fe"
+    "backgroundColor": "#fbf9fe",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "下拉刷新",
+    "enablePullDownRefresh" : true
   },
   "tabBar": {
     "color": "#dddddd",
